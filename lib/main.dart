@@ -1,5 +1,5 @@
 import 'package:cool_flutter_ui/buttons/neumorphismButton.dart';
-import 'package:cool_flutter_ui/sidebar/drawer.dart';
+import 'package:cool_flutter_ui/sidebar/animatedSidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       routes: {
-        '/': (_) => HomePage(),
+        '/': (_) => AnimatedSidebarScaffold(),
         '/neumorphismBtn': (_) => NeumorphismButton()
       },
     );
@@ -26,13 +26,8 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      drawer: Sidebar(),
-      appBar: AppBar(),
-      body: Center(
-        child: Lottie.asset('assets/welcome.json'),
-      ),
+    return Center(
+      child: Lottie.asset('assets/welcome.json'),
     );
   }
 }

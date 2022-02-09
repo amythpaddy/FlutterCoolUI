@@ -1,4 +1,3 @@
-import 'package:cool_flutter_ui/sidebar/drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +10,9 @@ class NeumorphismButtonState extends State<NeumorphismButton> {
   bool _isElevated = true;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      drawer: Sidebar(),
-      backgroundColor: Colors.grey[300],
-      body: Center(
+    return Container(
+      color: Colors.grey[300],
+      child: Center(
         child: GestureDetector(
           onTap: () {
             setState(() {
